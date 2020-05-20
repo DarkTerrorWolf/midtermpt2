@@ -1,0 +1,13 @@
+{
+  "name": "tschloss/328/midterm",
+  "authors": [
+    {
+      "name": "Tylor Schlosser",
+      "email": "tschlosser@mail.greenriver.edu"
+
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
