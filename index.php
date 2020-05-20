@@ -22,12 +22,15 @@ $f3->route('GET|POST /form', function ($f3) {
         var_dump($_POST);
         $input = $_POST['out'];
         $name = $_POST["name"];
+        $f3->set('name',$name);
+        $f3->set('selected',$input);
         if(empty($name)){
             $f3->set('errors["name"]', "Please enter your name");
         }
         if(!isset($input)&& !in_array($input,$output)){
             $f3->set('errors["message"]', "Please select a message");
         }
+
         if (empty( $f3->get('errors'))){
             session_start();
             $_SESSION['name']=$name;

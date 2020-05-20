@@ -28,7 +28,7 @@
     <div class="form-group">
         <label for="name" class="col-sm-2 control-label">Name </label>
         <div class="col-sm-2">
-            <input class="form-control" type="text" name="name" id="name">
+            <input class="form-control" type="text" name="name" id="name" value="{{@name}}">
         </div>
         <check if="{{ isset(@errors['name']) }}">
             {{ @errors['name'] }}
@@ -38,16 +38,21 @@
     <div class="form-group">
         <div class="col-sm-4">
             <repeat group="{{ @output }}" value="{{ @out }}">
-                <input class="custom-checkbox" type="checkbox" name="out[]" id="{{ @out }}" value="{{ @out}}">{{ ucfirst(@out)}}<br>
+                <label><input class="custom-checkbox"
+                              type="checkbox" name="out[]"
+                              id="{{ @out }}"
+                              value="{{ @out}}">{{ ucfirst(@out)}} </label><br>
             </repeat>
+
         </div>
         <check if="{{ isset(@errors['message']) }}">
             {{ @errors['message'] }}
         </check>
     </div>
-
+    <div class="col-sm-1">
     <input class="form-control btn btn-default"
            type="submit" value="Submit">
+    </div>
 </form>
 </body>
 </html>
