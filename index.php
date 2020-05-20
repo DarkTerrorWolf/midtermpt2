@@ -16,7 +16,8 @@ $f3->route('GET /', function () {
 });
 
 $f3->route('GET|POST /form', function ($f3) {
-    //echo "<h1>Hello World!</h1>";
+
+    $f3->set('output',array("This Midterm is easy. ","This is a bit of a challenge. ","I dont know how im going to pass! "));
     //if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //}
