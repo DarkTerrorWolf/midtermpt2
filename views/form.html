@@ -30,14 +30,20 @@
         <div class="col-sm-2">
             <input class="form-control" type="text" name="name" id="name">
         </div>
+        <check if="{{ isset(@errors['name']) }}">
+            {{ @errors['name'] }}
+        </check>
     </div>
 
     <div class="form-group">
         <div class="col-sm-4">
             <repeat group="{{ @output }}" value="{{ @out }}">
-                <input class="custom-checkbox" type="radio" name="out" id="{{ @out }}" value="{{ @out}}">{{ ucfirst(@out)}}<br>
+                <input class="custom-checkbox" type="checkbox" name="out[]" id="{{ @out }}" value="{{ @out}}">{{ ucfirst(@out)}}<br>
             </repeat>
         </div>
+        <check if="{{ isset(@errors['message']) }}">
+            {{ @errors['message'] }}
+        </check>
     </div>
 
     <input class="form-control btn btn-default"

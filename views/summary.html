@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Summary</title>
 </head>
 <body>
+<h1>Midterm Survey</h1>
+<h3>Thank you for taking the survey, {{@SESSION.name}}!</h3>
+<p>
+    <h5>Your answers</h5>
+        {{implode(@SESSION.message, ", ") }}}
 
+</p>
 </body>
 </html>
